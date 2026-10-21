@@ -53,9 +53,27 @@ are the closest starting points.
 ## Punch-ins and cut rhythm
 - Every segment change is a cut. Inside a take longer than 3 s, add a hard punch every 2 to 3 s, cycling zoom
   1.0 -> 1.28 -> 1.0 -> 1.5 (crop from the 4K original, cx/cy on the face so eyes stay in the upper third).
-- Hard punch = instant on the frame plus a 0.18 s settle from 1.03x of the new zoom. No slow push-ins longer than
-  one beat, no crossfades.
-- Target 3 to 6 visual changes per 10 s counting cuts, punches, big lines and cards.
+- Hard punch = instant on the frame plus a 0.18 s settle from 1.03x of the new zoom. No crossfades.
+- The zoom LEVEL must really change: consecutive segments never share a zoom. A settle from 1.03x alone is not a
+  punch (judge round 1 scored that "locked composition", motion 5/10).
+- Between punches the frame is never static: a slow drift on `#stage` of about 3% scale plus 10 to 20 px of x/y
+  over each segment (sine.inOut), direction alternating per segment.
+- Target 5 to 7 visual changes per 10 s counting cuts, punches, big lines, cards and full-screen beats.
+
+## Motion density (judge round 1: motion 5.0 vs references 8 to 9)
+The references move something on screen almost every second. Bragi must too, without breaking brand:
+- **Full-screen beats:** 2 or 3 moments per 30 s where a flat Ink `#161B1C` full-frame cutaway takes over for 0.7 to
+  1.2 s on the line that carries the argument (the headline claim, a number, the closing line). Giant Piazzolla type
+  (220 to 320 px) builds word by word on the spoken frames; the key word lands in Italic 600 Glow. Cut in and out
+  hard on word boundaries (audio continues underneath). These replace the face only briefly; never two in a row.
+- **Numbers count:** a spoken number animates (count up or roll per digit over 0.4 s) instead of appearing.
+- **Hook:** frame 1 shows the headline BIG (Piazzolla 150 px or more) over the top zone above the eyes (hat, sky,
+  wall), not a small boxed label. The punch-in on frame 1 goes to at least 1.15x.
+- **Captions breathe:** each word, as it is said, pops 1.08 to 1 over 0.12 s along with the 62 to 100% white step.
+- **Lists build:** each list row slides in, and the previous row's tick or rule travels to the new row (one Glow
+  element moving, not two).
+- **Exits move too:** big lines and cards leave with a 0.18 s rise plus fade, never a plain opacity cut.
+- **Sound follows motion:** a soft whoosh on every full-screen beat and big line, a tick on each list row.
 
 ## Illustrate the sentence (tenfoldmarc's method, adopted)
 Before building, read the transcript and mark 4 to 8 beats worth illustrating: a comparison, a number, a claim, a
